@@ -53,6 +53,10 @@ docker run -it --rm -v /tmp/.X11-unix:/tmp/.X11-unix -v $HOME:/home/user/host -e
 ```
 
 - Arch
+
+  <details><summary>Dockerfile-arch</summary>
+  
+  
   ```dockerfile
   FROM archlinux:20200705
   
@@ -159,6 +163,8 @@ docker run -it --rm -v /tmp/.X11-unix:/tmp/.X11-unix -v $HOME:/home/user/host -e
   #   Does Emacs support legacy unexec dumping?               no
   #   Which dumping strategy does Emacs use?                  pdumper
   ```
+
+  </details>
 
 - Ubuntu
   ```dockerfile
