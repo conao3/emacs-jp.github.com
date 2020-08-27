@@ -1,0 +1,21 @@
+## test.yml
+
+name: Main workflow
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1.44.0
+      with:
+        ruby-version: 2.6
+        bundler-cache: true
+
+    - name: Resolve dependency
+      run: 'bundle install'
+
+    - name: Build site
+      run: 'rake build'
